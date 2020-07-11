@@ -9,8 +9,14 @@ sudokuBoard = [[5, 3, 0, 0, 7, 0, 0, 0, 0],
          [0, 0, 0, 0, 8, 0, 0, 7, 9]]
 
 def solveBoard(board):
-    printBoard()
-    for i in range(len(board))
+    while checkSolved(board) == 0:
+        printBoard(board)
+        empty_space = findEmptySpace(board)
+        
+
+
+
+
 
 def printBoard(board):
     for i in range(len(board)):
@@ -32,3 +38,11 @@ def findEmptySpace(board):
             if board [i][j] == 0:
                 return (i, j)
     return 0
+
+def checkSolved(board):
+    if findEmptySpace(board) == 0:
+        return 1
+    return 0
+
+
+solveBoard(sudokuBoard)
