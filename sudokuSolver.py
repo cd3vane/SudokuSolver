@@ -17,7 +17,7 @@ def solveBoard(board):
         return True
     else:
         row, column = current_space
-    for i in range(1,10):
+    for i in range(1, 10):
         if isValidEntry(board, i, (row, column)):
             board[row][column] = i
 
