@@ -207,6 +207,9 @@ def main():
                         if board.isFinished():
                             print("You Win")
                             run = False
+                if event.key == pygame.K_z:
+                    board.update_model()
+                    solveBoard(board.model)
 
             if event.type == pygame.MOUSEBUTTONDOWN:
                 pos = pygame.mouse.get_pos()
