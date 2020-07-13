@@ -207,6 +207,11 @@ def main():
                         if board.isFinished():
                             print("You Win")
                             run = False
+
+                        if strikes == 3:
+                            run = False
+                            print("You Lose")
+
                 if event.key == pygame.K_z:
                     board.update_model()
                     solveBoard(board.model)
